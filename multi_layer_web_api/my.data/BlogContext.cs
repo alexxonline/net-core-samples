@@ -10,7 +10,7 @@ namespace my.data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Filename=../db/blog.db");
+            optionsBuilder.UseSqlite("Filename=./blog.db");
         }
     }
 }

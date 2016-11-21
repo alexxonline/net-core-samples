@@ -1,9 +1,12 @@
 {
   "version": "1.0.0-*",
   "buildOptions": {
-    "emitEntryPoint": true
+    "emitEntryPoint": true,
+    "copyToOutput": {
+      "include": "**/*.db"
+    }
   },
-
+  
   "dependencies": {
     "Microsoft.NETCore.App": {
       "type": "platform",
