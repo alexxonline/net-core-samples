@@ -8,7 +8,7 @@ using my.data;
 namespace my.data.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20161118115343_MyFirstMigration")]
+    [Migration("20161123114015_MyFirstMigration")]
     partial class MyFirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,7 +50,7 @@ namespace my.data.Migrations
 
             modelBuilder.Entity("my.domain.Articulo", b =>
                 {
-                    b.HasOne("my.domain.Blog", "Blog")
+                    b.HasOne("my.domain.Blog")
                         .WithMany("Articulos")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade);

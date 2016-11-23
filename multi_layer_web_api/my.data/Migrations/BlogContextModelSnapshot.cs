@@ -49,7 +49,7 @@ namespace my.data.Migrations
 
             modelBuilder.Entity("my.domain.Articulo", b =>
                 {
-                    b.HasOne("my.domain.Blog", "Blog")
+                    b.HasOne("my.domain.Blog")
                         .WithMany("Articulos")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade);

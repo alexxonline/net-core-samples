@@ -47,7 +47,8 @@ namespace my.data
         public IEnumerable<Blog> Listar()
         {
             using(var context = getNewContext()) {
-                return context.Blogs.AsNoTracking().ToList();
+                return context.Blogs.AsNoTracking()
+                .Include(b=>b.Articulos).ToList();
             }
         }
 

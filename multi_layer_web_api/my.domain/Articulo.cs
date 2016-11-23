@@ -7,6 +7,5 @@ namespace my.domain
         public string Contenido { get; set; }
 
         public int BlogId { get; set; }
-        public Blog Blog { get; set; }
     }
 }

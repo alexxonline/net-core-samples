@@ -12,5 +12,13 @@ namespace my.data
         {
             optionsBuilder.UseSqlite("Filename=./blog.db");
         }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder) {
+            modelBuilder
+                .Entity<Blog>()
+                .HasMany(p=>p.Articulos)
+                .WithOne()
+                .HasForeignKey(art=>art.BlogId);
+        }
     }
 }

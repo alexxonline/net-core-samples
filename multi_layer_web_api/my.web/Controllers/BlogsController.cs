@@ -29,7 +29,7 @@ namespace my.web {
         }
 
         [HttpPost]
-        public void Post(Blog blog){
+        public void Post([FromBody]Blog blog){
             RepositorioBlog.Agregar(blog);
         }
 
